@@ -14,7 +14,7 @@ const Fact = () => {
     const getJoke = async () => {
         setLoading(true);
         let jokeFet =  fetch("/api/joke", {
-          method: "GET",
+          method: "POST",
           cache: 'no-store',
           body: JSON.stringify(Math.random())
         },
