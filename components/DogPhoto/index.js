@@ -11,10 +11,10 @@ const Cont = styled.div`
     .photo-content {
       display: flex;
       & > div:nth-of-type(1) {
-        flex-basis: 25%;
+        flex-basis: 30%;
       }      
       & > :last-of-type {
-        flex-basis: 75%;
+        flex-basis: 70%;
       }    
     }
 

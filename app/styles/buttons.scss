@@ -26,6 +26,26 @@ $paleBlue: #CAF0F8;
     }
 }
 
+.unselected-btn {
+    border-radius: 8px;
+    background-color: $paleBlue;
+    border-style: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition:  background-color .25s ease, color .25s ease;
+    h1, h2, h3, h4, h5, p {
+        color: $darkBlue;
+        font-weight: 400;
+    }
+    &:hover {
+        background-color: $darkBlue;
+        h1, h2, h3, h4, h5, p {
+            color: $paleBlue;
+        }
+    }
+  
+}
+
 .loader {
     width:  24px;
     height: 24px;

@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import styled from "styled-components"
 import COLORS from "@/data/colors"
 import Joke from "@/components/Fact";
