@@ -27,7 +27,7 @@ const DogPhoto = () => {
   
 
   const fetchUrl = async () => {
-    const response = await fetch('../../app/api/images/random', {method: "GET", cache: 'no-cache'});
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOSTNAME}/api/images/random`, {method: "GET", cache: 'no-cache'});
     const {image} = await response.json();
     setUrl(image.message);
   }
