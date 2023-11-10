@@ -1,0 +1,46 @@
+$darkBlue: #023E8A;
+$medblue: #0077B6;
+$lightBlue: #90E0EF;
+$paleBlue: #CAF0F8;
+
+.default-btn {
+    background-color: $darkBlue;
+    border-style: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition:  background-color .25s ease;
+    h1, h2, h3, h4, h5, p {
+        color: $paleBlue;
+        font-weight: 400;
+    }
+    &:hover {
+        background-color: $medblue;
+    }
+    &:active {
+        transition: none;
+        h1, h2, h3, h4, h5, p {
+            color: $darkBlue;
+        }
+        background-color: $paleBlue;
+    }
+}
+
+.loader {
+    width:  24px;
+    height: 24px;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
