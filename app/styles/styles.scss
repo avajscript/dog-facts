@@ -11,8 +11,28 @@ $paleBlue: #CAF0F8;
     padding: 32px 32px;
     max-width: 1600px;
     margin: 0 auto;
+    min-height: 90vh;
 }
 
+a {
+  color: rgb(1, 251, 1);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.underline {
+  text-decoration: underline;
+}
+
+ul {
+  margin-left: 32px;
+}
+li {
+  color: $paleBlue;
+}
 html {
     background-color: $paleBlue;
 }

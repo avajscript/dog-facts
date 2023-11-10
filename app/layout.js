@@ -1,5 +1,6 @@
 import "./styles/styles.scss";
 import Navbar from '@/components/Navbar'
+import Footer from "@/components/Footer";
 import StyledComponentsRegistry from '@/lib/registry'
 
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <Navbar />
         {children}
+        <Footer />
         </StyledComponentsRegistry>
         
         
