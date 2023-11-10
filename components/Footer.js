@@ -23,6 +23,10 @@ const Footer = () => {
             <li>
                 <p> <a target='blank'  href="https://kinduff.github.io/dog-api/">Kinduff dog-api</a></p>
             </li>
+            <li>
+                <p> <a target='blank'  href="https://dog.ceo/dog-api/">Dog.ceo Dog Api</a></p>
+            </li>
+            
         </ul>
     </Cont>
   )
