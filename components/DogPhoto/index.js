@@ -32,7 +32,7 @@ const DogPhoto = () => {
     setUrl(image.message);
   }
   useState(()=> {
-    fetchUrl();
+    //fetchUrl();
   }, []);
    
   console.log('url');
