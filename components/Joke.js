@@ -20,7 +20,7 @@ const Joke = () => {
     const [loading, setLoading] = useState(false);
     const getJoke = async () => {
         setLoading(true);
-        let jokeFet = fetch("/api/joke");
+        let jokeFet = fetch("/api/joke", {cache: 'no-store'});
         jokeFet = await (await jokeFet).json();
      
         jokeRef.current.innerHTML = jokeFet.name.facts[0];
