@@ -4,17 +4,10 @@ import styled from 'styled-components';
 import COLORS from '@/data/colors';
 
 const Cont = styled.div`
-.joke {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 12px 16px;
-   
-  }
+
 `;
 
-const Joke = () => {
+const Fact = () => {
     const jokeRef = useRef(null);
     const [joke, setJoke] = useState("");
     const [loading, setLoading] = useState(false);
@@ -35,10 +28,10 @@ const Joke = () => {
       
   
   return (
-    <Cont colors = {COLORS}>
-        <div className="joke">
-        <h3 className = 'mar-bottom-8'>Want to hear a dog joke?</h3>
-        <h4 className="regular mar-bottom-8">Click below</h4>
+    <Cont colors = {COLORS} >
+        <div className="default-section">
+        <h3 className = 'mar-bottom-8'>Want to hear a dog Fact?</h3>
+    
         <div className="blue-line mar-bottom-32"></div>
         <p className = 'mar-bottom-32' ref = {jokeRef}></p>
         <button className='default-btn' onClick={getJoke}>
@@ -50,4 +43,4 @@ const Joke = () => {
   )
 }
 
-export default Joke
+export default Fact;
