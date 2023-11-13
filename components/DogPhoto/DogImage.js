@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image';
-import styled from 'styled-components';
-import COLORS from '@/data/colors';
+import React from "react";
+import Image from "next/image";
+import styled from "styled-components";
+import COLORS from "@/data/colors";
 
 const Cont = styled.div`
   position: relative;
@@ -10,21 +10,32 @@ const Cont = styled.div`
   margin-left: 32px;
   border-radius: 8px;
   overflow: hidden;
+  @media only screen and (max-width: 800px) {
+    margin-left: 0px;
+  }
+  @media only screen and (max-width: 600px) {
+    .dog-image {
+      height: 400px !important;
+    }
+    //height: 400px;
+  }
 `;
 
-const DogImage = ({url}) => {
+const DogImage = ({ url }) => {
   return (
     <Cont>
-      <Image 
-        src = {url}
-        alt = 'Dog'
-        fill
-        style = {{
-          objectFit: "contain"
-        }}
-      />
+      <div className="dog-image">
+        <Image
+          src={url}
+          alt="Dog"
+          fill
+          style={{
+            objectFit: "contain",
+          }}
+        />
+      </div>
     </Cont>
-  )
-}
+  );
+};
 
-export default DogImage
+export default DogImage;
