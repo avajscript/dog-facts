@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import COLORS from "@/data/colors";
 import Image from "next/image";
@@ -23,20 +23,35 @@ const Cont = styled.div`
   .close {
     margin-bottom: 8px;
   }
+
+  @media only screen and (max-width: 800px) {
+    padding: 16px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 4px;
+  }
 `;
 
 const ImagePreview = ({ previewUrl, hidePreview }) => {
+  const imgRef = useRef(null);
   const hidePreviewWrapper = () => {
-    setTimeout(() => {}, 1000);
+    imgRef.current.classList.remove("show-img-anim");
+    imgRef.current.classList.add("hide-img-anim");
+    setTimeout(() => {
+      hidePreview();
+      imgRef.current.classList.remove("hide-img-anim");
+    }, 1000);
   };
+
   return (
-    <Cont colors={COLORS}>
+    <Cont ref={imgRef} colors={COLORS} className="show-img-anim">
       <div className="flex justify-end">
         <div className="close">
           <FontAwesomeIcon
             icon={faClose}
             className="icon-lg"
-            onClick={hidePreview}
+            onClick={hidePreviewWrapper}
           />
         </div>
       </div>

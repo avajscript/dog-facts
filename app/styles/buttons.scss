@@ -1,67 +1,92 @@
-$darkBlue: #023E8A;
-$medblue: #0077B6;
-$lightBlue: #90E0EF;
-$paleBlue: #CAF0F8;
+$darkBlue: #023e8a;
+$medblue: #0077b6;
+$lightBlue: #90e0ef;
+$paleBlue: #caf0f8;
 
 .default-btn {
-    border-radius: 8px;
-    background-color: $darkBlue;
-    border-style: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition:  background-color .25s ease;
-    h1, h2, h3, h4, h5, p {
-        color: $paleBlue;
-        font-weight: 400;
+  border-radius: 8px;
+  background-color: $darkBlue;
+  border-style: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: $paleBlue;
+    font-weight: 400;
+  }
+  &:hover {
+    background-color: $medblue;
+  }
+  &:active {
+    transition: none;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      color: $darkBlue;
     }
-    &:hover {
-        background-color: $medblue;
-    }
-    &:active {
-        transition: none;
-        h1, h2, h3, h4, h5, p {
-            color: $darkBlue;
-        }
-        background-color: $paleBlue;
-    }
+    background-color: $paleBlue;
+  }
 }
 
 .unselected-btn {
-    border-radius: 8px;
-    background-color: $paleBlue;
-    border-style: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition:  background-color .25s ease, color .25s ease;
-    h1, h2, h3, h4, h5, p {
-        color: $darkBlue;
-        font-weight: 400;
+  border-radius: 8px;
+  background-color: $paleBlue;
+  border-style: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: $darkBlue;
+    font-weight: 400;
+  }
+  &:hover {
+    background-color: $darkBlue;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      color: $paleBlue;
     }
-    &:hover {
-        background-color: $darkBlue;
-        h1, h2, h3, h4, h5, p {
-            color: $paleBlue;
-        }
-    }
-  
+  }
 }
 
 .loader {
-    width:  24px;
-    height: 24px;
-    border: 2px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-blue {
+  @extend .loader;
+  border: 2px solid $darkBlue;
+  border-bottom-color: transparent;
+}

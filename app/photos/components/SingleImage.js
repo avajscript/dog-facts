@@ -18,7 +18,7 @@ const Cont = styled.div`
 `;
 const WIDTH = 200;
 
-const SingleImage = ({ url }) => {
+const SingleImage = ({ url, selectImage }) => {
   if (typeof window != "undefined") {
     const img = document.createElement("img");
     img.src = url;
@@ -26,9 +26,15 @@ const SingleImage = ({ url }) => {
     const ratio = img.width / img.height;
 
     return (
-      <Cont colors={COLORS}>
+      <Cont colors={COLORS} onClick={() => selectImage(url)}>
         {/** Set image width based on actual image dimension ratio times the WIDTH VARIABLE (200) */}
-        <Image src={url} width={WIDTH} height={WIDTH / ratio || 300} />
+        <Image
+          src={url}
+          width={WIDTH}
+          height={WIDTH / ratio || 300}
+          alt="dog"
+          loading="lazy"
+        />
       </Cont>
     );
   }

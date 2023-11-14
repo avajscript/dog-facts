@@ -18,10 +18,10 @@ const Cont = styled.div`
   }
 `;
 
-const Search = () => {
+const Search = ({ searchText, updateSearch }) => {
   return (
     <Cont colors={COLORS}>
-      <input type="text" />
+      <input type="text" value={searchText} onChange={updateSearch} />
       <FontAwesomeIcon icon={faSearch} className="dark-blue icon-sm" />
     </Cont>
   );

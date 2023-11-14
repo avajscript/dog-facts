@@ -18,11 +18,11 @@ const Cont = styled.div`
   }
 `;
 
-const SearchSection = () => {
+const SearchSection = ({ searchText, updateSearch }) => {
   return (
     <Cont colors={COLORS}>
       <div className="header">
-        <Search />
+        <Search searchText={searchText} updateSearch={updateSearch} />
       </div>
     </Cont>
   );

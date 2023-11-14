@@ -1,6 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import COLORS from "@/data/colors";
 const SingleImage = dynamic(
@@ -17,17 +17,21 @@ const Cont = styled.div`
   flex-wrap: wrap;
 `;
 
-const RENDER_COUNT = 20;
-
-const ImageSection = ({ images }) => {
+const ImageSection = ({ images, selectImage, renderCount }) => {
   const setImages = () => {
     const imageArr = [];
-    for (let i = 0; i < RENDER_COUNT; i++) {
-      imageArr.push(<SingleImage key={i} url={images[i]} />);
+    for (let i = 0; i < renderCount; i++) {
+      imageArr.push(
+        <SingleImage selectImage={selectImage} key={i} url={images[i]} />
+      );
     }
     return imageArr;
   };
   const [imageElems, setImageElems] = useState(setImages);
+
+  useEffect(() => {
+    setImageElems(setImages);
+  }, [renderCount, images]);
 
   return <Cont colors={COLORS}>{imageElems}</Cont>;
 };
