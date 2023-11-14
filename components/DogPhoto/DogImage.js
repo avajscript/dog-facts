@@ -8,8 +8,7 @@ const Cont = styled.div`
   width: 100%;
   height: 600px;
   margin-left: 32px;
-  border-radius: 8px;
-  overflow: hidden;
+
   @media only screen and (max-width: 800px) {
     margin-left: 0px;
   }

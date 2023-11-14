@@ -6,6 +6,66 @@ $medblue: #0077b6;
 $lightBlue: #90e0ef;
 $paleBlue: #caf0f8;
 
+.breed-select {
+  padding: 8px 12px;
+  background-color: $paleBlue;
+  border-radius: 32px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  p {
+    color: $darkBlue;
+  }
+  transition: background-color 0.25s ease, color 0.25s ease;
+  &:hover {
+    background-color: $darkBlue;
+    p {
+      color: $paleBlue;
+    }
+  }
+}
+
+.breed-selected {
+  padding: 8px 12px;
+  background-color: $darkBlue;
+  border-radius: 32px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  p {
+    color: $paleBlue;
+  }
+}
+
+// Colors
+.dark-blue {
+  color: $darkBlue;
+}
+
+.icon-sm {
+  font-size: 20px;
+}
+
+.icon-med {
+  font-size: 30px;
+}
+
+.icon-lg {
+  font-size: 40px;
+}
+
+.close {
+  transition: color 0.25s ease;
+  cursor: pointer;
+  &:hover {
+    color: $lightBlue;
+  }
+  &:active {
+    color: $paleBlue;
+  }
+}
+// End of colors
+
 // Defaults
 .default-page {
   padding: 32px 32px;
@@ -34,6 +94,25 @@ a {
   }
 }
 
+.link {
+  color: inherit;
+  h3,
+  h4,
+  h5,
+  p {
+    transition: color 0.25s ease;
+  }
+  &:hover {
+    text-decoration: none;
+    h3,
+    h4,
+    h5,
+    p {
+      color: $medblue !important;
+    }
+  }
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -58,6 +137,10 @@ html {
 
 .flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .justify-center {

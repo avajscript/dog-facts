@@ -20,6 +20,10 @@ const Cont = styled.div`
     }
   }
 
+  .dog-image {
+    border-radius: 8px;
+    overflow: hidden;
+  }
   @media only screen and (max-width: 800px) {
     .input {
       margin-bottom: 8px;

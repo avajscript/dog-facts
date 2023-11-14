@@ -1,9 +1,11 @@
-import { NextResponse } from "next/server";
-
-export async function GET(req, res) {
-    const fetchRes = await fetch('https://dog.ceo/api/breeds/list/all'); 
-    const breeds = await fetchRes.json();
-    
-
-    return NextResponse.json({breeds: breeds.message});
+export async function POST(req) {
+  const message = await req.json();
+  const breedImages = await fetch(
+    `https://dog.ceo/api/breed/${message.breed}/images`
+  );
+  return new Response(JSON.stringify(await breedImages.json()), {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }
