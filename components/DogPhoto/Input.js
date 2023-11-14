@@ -33,7 +33,7 @@ const Input = ({
   };
 
   const fetchBreeds = async () => {
-    let res = await fetch("/api/images/breeds", {
+    let res = await fetch("/api/breeds", {
       cache: "force-cache",
       method: "GET",
     });

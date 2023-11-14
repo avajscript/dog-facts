@@ -6,5 +6,5 @@ export async function GET(req, res) {
   });
   const image = await response.json();
 
-  return NextResponse.json({ message: image?.message });
+  return NextResponse.json({ message: image.message });
 }
