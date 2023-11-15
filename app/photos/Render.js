@@ -63,6 +63,8 @@ const Render = ({ breeds, imagesFetch }) => {
   };
   // updates breed, re-renders select list and images
   const selectBreed = async (breed) => {
+    console.log("????");
+    console.log(breed);
     setLoading(true);
     setSelectedBreed(breed);
     setBreedSelects(renderBreeds(breed));
@@ -70,6 +72,7 @@ const Render = ({ breeds, imagesFetch }) => {
     // fetch images and set based on selected breed
     let imagesFetch = await fetchAllImagesbyBreed(breed);
     imagesFetch = imagesFetch.message;
+
     setImages(imagesFetch);
     // set render count to images array length if it is less than the renderIterator
     setRenderCount(
