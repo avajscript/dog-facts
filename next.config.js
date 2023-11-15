@@ -3,7 +3,7 @@ const nextConfig = {};
 
 module.exports = {
   env: {
-    URL: process.env.URL,
+    VERCEL_URL: process.env.VERCEL_URL,
   },
   images: {
     remotePatterns: [

@@ -7,7 +7,7 @@ import { fetchAllImagesbyBreed } from "@/lib/fetching";
 
 const Photos = async () => {
   // fetch breed list from dog api
-  const breedsFetch = await fetch(process.env.URL + "/api/breeds", {
+  const breedsFetch = await fetch(process.env.VERCEL_URL + "/api/breeds", {
     cache: "force-cache",
     method: "GET",
   });
