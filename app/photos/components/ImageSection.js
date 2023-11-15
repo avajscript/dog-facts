@@ -13,8 +13,14 @@ const SingleImage = dynamic(
 const Cont = styled.div`
   max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ImageSection = ({ images, selectImage, renderCount }) => {

@@ -47,7 +47,7 @@ const DogPhoto = () => {
   const fetchRandomImage = async () => {
     // call to local api route, which calls free dog api to get random dog image
     const imageFetch = await fetch("/api/images/random", {
-      cache: "no-cache",
+      cache: "no-store",
       method: "GET",
       headers: {
         "Content-Type": "application/json",

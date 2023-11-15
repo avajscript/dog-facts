@@ -11,6 +11,7 @@ const Cont = styled.div`
   padding: 8px;
   display: inline-flex;
   input {
+    width: 100%;
     font-size: 16px;
     border: none;
     outline: none;

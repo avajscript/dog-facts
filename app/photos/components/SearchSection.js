@@ -15,6 +15,7 @@ const Cont = styled.div`
     background-color: ${(props) => props.colors.darkBlue};
     padding: 8px 12px;
     border-radius: 16px 16px 0 0;
+    position: relative;
   }
 `;
 

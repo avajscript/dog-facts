@@ -6,7 +6,10 @@ $darkBlue: #023e8a;
 $medblue: #0077b6;
 $lightBlue: #90e0ef;
 $paleBlue: #caf0f8;
+$green: #00b649;
 
+input[type="text"] {
+}
 .breed-select {
   padding: 8px 12px;
   background-color: $paleBlue;
@@ -41,6 +44,11 @@ $paleBlue: #caf0f8;
 // Colors
 .dark-blue {
   color: $darkBlue;
+}
+
+.green-icon {
+  color: $green;
+  cursor: pointer;
 }
 
 .icon-sm {
